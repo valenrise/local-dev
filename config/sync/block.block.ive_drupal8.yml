@@ -1,0 +1,25 @@
+uuid: de0e8d07-08f2-4d37-b974-b87b460a278f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b339b958-cceb-4fe8-a3d9-aa8d48a6b4c5'
+  module:
+    - block_content
+  theme:
+    - ive
+id: ive_drupal8
+theme: ive
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:b339b958-cceb-4fe8-a3d9-aa8d48a6b4c5'
+settings:
+  id: 'block_content:b339b958-cceb-4fe8-a3d9-aa8d48a6b4c5'
+  label: 'Drupal 8'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

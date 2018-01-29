@@ -1,0 +1,18 @@
+uuid: 683d9be3-6fcf-42c4-a8f4-a2bff391d223
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: dev
+folder: ../config/dev
+module:
+  field_ui: 0
+  menu_ui: 0
+  views_ui: 0
+  webform_ui: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

@@ -1,0 +1,8 @@
+uuid: c395c096-2bf3-4d4c-8386-69a6e772fa9d
+langcode: en
+status: true
+dependencies: {  }
+id: very_long
+label: very_long
+locked: false
+pattern: 'l,  j F Y  \à - H:i'
