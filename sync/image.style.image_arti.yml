@@ -1,0 +1,7 @@
+uuid: 898414d1-eaef-4f8f-99d7-e5eeb7511ec3
+langcode: en
+status: true
+dependencies: {  }
+name: image_arti
+label: 'image article'
+effects: {  }

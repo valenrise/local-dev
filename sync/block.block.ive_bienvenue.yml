@@ -1,0 +1,31 @@
+uuid: 06c1979d-8943-4271-b16c-a2764b9a2560
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e9bc9855-626e-49c9-ad02-f5063ba5c552'
+  module:
+    - block_content
+    - system
+  theme:
+    - ive
+id: ive_bienvenue
+theme: ive
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'block_content:e9bc9855-626e-49c9-ad02-f5063ba5c552'
+settings:
+  id: 'block_content:e9bc9855-626e-49c9-ad02-f5063ba5c552'
+  label: Bienvenue
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

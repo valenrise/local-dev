@@ -1,0 +1,6 @@
+name: hello
+description: message dans la tâche cron
+type: module
+core: 8.x
+version: 8.4
+package: hello

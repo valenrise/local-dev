@@ -1,0 +1,9 @@
+hello permission:
+  title: 'Hello permission'
+  description: 'permet de voir ou non le bloc compteur de session'
+  restrict access: 'true'
+
+administer hello:
+  title: 'administer hello'
+  description: 'permet de voir ou non la page administration des couler des blocs'
+  restrict access: 'true'

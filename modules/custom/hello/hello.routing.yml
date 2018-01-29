@@ -1,0 +1,90 @@
+hello.hello:
+  path: '/Hello/{param}'
+  defaults:
+    _title: 'Hello'
+    _controller: '\Drupal\hello\Controller\HelloController::content'
+    param: ''
+  requirements:
+    _access: 'TRUE'
+
+
+hello.hellojson:
+  path: '/hello-json'
+  defaults: 
+    _title: 'hello-json'
+    _controller: '\Drupal\hello\Controller\HelloJsonController::content'
+  requirements:
+    _access: 'TRUE'
+
+
+hello.itemList:
+  path: '/node-list/{param}'
+  defaults:
+    _title: 'Node list'
+    _controller: '\Drupal\hello\Controller\HelloNodeList::content'
+    param: 'NULL'
+  requirements:
+    _access: 'TRUE'
+
+hello.nodeHistory:
+  path: '/node/{node}/history'
+  defaults:
+    _title: 'node history'
+    _controller: '\Drupal\hello\Controller\HelloNodeHistoryController::content'
+  requirements:
+    _access: 'TRUE'
+
+hello.form:
+  path: '/hello-form'
+  defaults:
+    _title: 'Hello form'
+    _form: '\Drupal\hello\Form\HelloForm'
+  requirements:
+    _access: 'TRUE'
+
+hello.colorBlock:
+  path: 'admin/appearance/hello-color-block'
+  defaults:
+    _title: 'Hello colorBlock'
+    _form: '\Drupal\hello\Form\HelloColorBlock'
+  requirements:
+    _access: 'TRUE'
+    _permission: 'administer hello'
+
+hello.paysList:
+  path: '/hello-paysList'
+  defaults:
+    _title: 'Hello PaysList'
+    _form: '\Drupal\hello\Form\HelloPaysList'
+  requirements:
+    _access: 'TRUE'
+hello.console_test_controller_hello:
+  path: 'console-test'
+  defaults:
+    _controller: '\Drupal\hello\Controller\ConsoleTestController::hello'
+    _title: 'content'
+  requirements:
+    _permission: 'access content'
+hello.console_test_controller_consoletest:
+  path: 'console'
+  defaults:
+    _controller: '\Drupal\hello\Controller\ConsoleTestController::consoletest'
+    _title: 'content'
+  requirements:
+    _permission: 'access content'
+hello.console_test_controller_y:
+  path: 'ennerick'
+  defaults:
+    _controller: '\Drupal\hello\Controller\ConsoleTestController::y'
+    _title: 'y'
+  requirements:
+    _permission: 'access content'
+
+hello.id_meuf:
+  path: '/hello/form/drague'
+  defaults:
+    _form: '\Drupal\hello\Form\drague'
+    _title: 'drague'
+  requirements:
+    _access: 'TRUE'
+  

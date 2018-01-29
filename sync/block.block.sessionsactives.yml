@@ -1,0 +1,20 @@
+uuid: eadbea15-faf6-4e2b-9620-3fe1b7a2f83a
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello
+  theme:
+    - ive
+id: sessionsactives
+theme: ive
+region: sidebar_first
+weight: 0
+provider: null
+plugin: SessionBlock
+settings:
+  id: SessionBlock
+  label: 'Sessions actives'
+  provider: hello
+  label_display: visible
+visibility: {  }

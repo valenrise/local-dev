@@ -1,0 +1,77 @@
+<?php
+
+  use Drupal\Core\Entity\EntityTypeManager;
+
+  function hello_cron() {
+    drupal_set_message('hello module cron task done.', 'status');
+  }
+
+  function hello_user_login($account) {
+    drupal_set_message('bonjour cher ' . $account->getAccountName() , 'status');
+  }
+
+
+  function hello_node_update($entity) {
+    //kint($entity);
+
+    $user = $entity->getRevisionUser()->id();
+    //kint($user);
+    $nid = $entity->id();
+    //kint($nid);
+    $dateUpdate = $entity->getRevisionCreationTime();
+    //kint($dateUpdate);
+    //kint(\Drupal::service('database'));
+    $db = \Drupal::service('database');
+    $requete = $db->insert('hello_node_history')->
+    //die();
+    fields([
+      'nid' => $nid,
+      'uid' => $user,
+      'update_time' => $dateUpdate,
+    ])
+    ->execute();
+
+  }
+
+  function hello_node_delete($entity) {
+
+    $nid = $entity->id();
+    /*kint(\Drupal::service('database'));
+    die();*/
+    $db = \Drupal::service('database');
+    $requete = $db->delete('hello_node_history')->condition('nid', $nid)->execute();
+  }
+
+  function hello_preprocess_block(&$variables) {
+
+  //kint($variables);
+  // Add a clearfix class to system branding blocks.
+  //$config = $variables
+    $config = \Drupal::Config('hello.config')->get('color_block');
+
+
+    $variables['attributes']['class'][] = $config . '_block';
+
+  //kint($config);
+
+
+  //kint($variables);
+  /*// add bass_path variables
+  $variables['base_path'] = base_path();
+  //kint($variables['base_path']);*/
+  }
+
+  function hello_page_attachments(array &$page) {
+    $page['#attached']['library'][] = 'hello/base';
+  }
+
+  /*function hello_theme() {
+
+
+  $database = \Drupal::database();
+  $dbNodeHistory = $database->select('hello_node_history','hnh')->fields('hnh', ['hid']);//->countQuery();
+  //kint($dbNodeHistory);
+  die();
+    return ['hello_node_history' => ['variable' =>['node' => NULL, 'count' => NULL],],];
+  }*/
+

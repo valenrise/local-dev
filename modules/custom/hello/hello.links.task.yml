@@ -1,0 +1,11 @@
+hello.history:
+  title: 'date history'
+  base_route: entity.node.canonical
+  route_name: hello.nodeHistory
+  weight: 4
+
+hello.colorBlock:
+  title: 'color block'
+  base_route: system.themes_page
+  route_name: hello.colorBlock
+  weight: 1

@@ -1,0 +1,77 @@
+#header {
+    background: #fff;
+}
+
+.site-branding__name a{
+      font-size: 2rem;
+      color: orange;
+      font-family: 'time new roman';
+}
+
+.path-frontpage .node--view-mode-teaser h2 a{
+  font-size: 2rem;
+  color: orange;
+  font-family: impact;
+}
+
+.sidebar .block {
+    background-color: #fff;
+    border: none;
+}
+
+.sidebar h2 {
+    margin: 0 0 0.5em;
+    border-bottom: 2px solid orange;
+    padding-bottom: 5px;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 1.2em;
+    line-height: 1.2;
+    color: orange;
+    text-transform: uppercase;
+    font-weight: 999;
+}
+
+.region-primary-menu .menu-item a {
+    border-bottom: none;
+    background: white !important;
+    color: orange;
+}
+
+.region-primary-menu .menu-item a:hover {
+    border-bottom: none;
+    background: orange !important;
+    border-radius: 8px;
+    color: white;
+}
+
+.region-primary-menu .menu-item a.is-active{
+  border-bottom: none;
+    background: orange !important;
+    border-radius: 8px;
+    color: white;
+}
+
+.button.search-form__submit, .search-form__submit {
+    background: #f0f0f0 url(../../../../../misc/icons/505050/loupe.svg) no-repeat center;
+  }
+
+.drupal8{
+  width: 100%;
+}
+
+.droite, .gauche{
+    width: 50%;
+    float: left;
+}
+
+span.obligatoire {
+    color: red;
+}
+
+.ext_link:before{
+      content: '';
+    background-image: url(../js/external-link.gif);
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
